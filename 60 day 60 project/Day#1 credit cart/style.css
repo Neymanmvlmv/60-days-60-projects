@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+.card {
+    width: 500px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card.active .card-container {
+    transform: rotateY(180deg);
+  }
+.front,
+.back{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%; 
+    height: 100%;
+    color: white;
+    backface-visibility: hidden;
+    background-image: url(6221798.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+.back {
+    transform: rotateY(180deg); 
+}
+.front .crd-name{
+   font-size: 25px;
+   position: absolute;
+   left: 30px;
+}
+   
+.front .sim{
+    position: absolute;
+    width: 50px;
+    transform: rotate(270deg);
+    top: 100px;
+    left: 30px;
+}
+.front .mstr-card{
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    width: 100px;
+}
+.main-card{
+    position: absolute;
+    top: 170px;
+    height: 120px;
+    display: flex;
+    left: 30px;
+}
+.card-number{
+    position: absolute;
+    top: -10px;
+}
+.card-number p{
+    position: absolute;
+    width: 90px;
+    font-size: 12px;
+    font-weight: 200;
+}
+.card-month,
+.card-dy{
+    position: absolute;
+    bottom: 0;
+}
+.card-dy{
+    left: 160px;
+}
+.card-number h3{
+    position: absolute;
+    font-size: 17px;
+    font-weight: 500;
+    width: 200px;
+    top: 12px;
+}
+.card-month h3,
+.card-dy h3{ 
+    font-size: 17px;
+    font-weight: 400;
+}
+.card-month p,
+.card-dy p{ 
+    position: absolute;
+    bottom: 30px;
+    font-size: 12px;
+    font-weight: 200;
+}
+.back .back-header p{
+   font-weight: 200;
+   font-size: 12px;
+   position: absolute;
+   left: 30px;
+}
+.blackbox{
+    position: absolute;
+    background-color: #000000;
+    width: 500px;
+    height: 70px;
+    top: 35px;
+}
+.cvv{
+    position: relative;
+    display: flex;
+    top: 100px;
+    width: 480px;
+    height: 40px;
+}
+.cvv .white-box,
+p{
+    position: absolute;
+}
+.cvv p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-style: italic;
+    right: 0;
+    width: 50px;
+    top: 4px;
+    color: #000000;
+    background-color: #fff;
+    height: 40px;
+}
+.white-box{
+    position: absolute;
+    background-color: #d4d4d4;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    width: 400px;
+    height: 40px;
+    top: 20px;
+    left: 30px;
+}
+.end div{
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    font-size: 12px;
+    font-weight: 200;
+}
